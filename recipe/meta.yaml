@@ -1,5 +1,5 @@
 {% set name = "jupyterlite-sphinx" %}
-{% set version = "0.9.3" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlite_sphinx-{{ version }}.tar.gz
-  sha256: 9be4ac99e98b03f125b9ae5b63a137a6d1d7ba0bdf61dd1aedbf83ae77fe0716
+  sha256: 22c752aab641b2b0d90d19d0718be4a6d9a677b52b6f72591c09a8d7d2f86167
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - docutils
     - jupyter_server
     - jupyterlab_server
-    - jupyterlite-core >=0.1.0,<0.2.0
+    - jupyterlite-core >=0.2.0,<0.3.0
     - sphinx >=4
 
 test:
