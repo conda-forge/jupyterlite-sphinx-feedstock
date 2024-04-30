@@ -145,9 +145,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Carreau](https://github.com/Carreau/)
 * [@jtpio](https://github.com/jtpio/)
 * [@martinRenou](https://github.com/martinRenou/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@steppi](https://github.com/steppi/)
 
