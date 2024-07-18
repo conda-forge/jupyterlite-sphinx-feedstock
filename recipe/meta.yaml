@@ -1,5 +1,5 @@
 {% set name = "jupyterlite-sphinx" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlite_sphinx-{{ version }}.tar.gz
-  sha256: 6bb700917224a89646f394a4f0c24d2516487e000a5a2cadc5102ac7e978d2bd
+  sha256: dc7cb7deca66be399903d86a769ee09da692a6f0a9b3db147d467670e178cb9d
 
 build:
   noarch: python
