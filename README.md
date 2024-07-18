@@ -150,6 +150,3 @@ Feedstock Maintainers
 * [@martinRenou](https://github.com/martinRenou/)
 * [@steppi](https://github.com/steppi/)
 
-
-<!-- dummy commit to enable rerendering -->
-
