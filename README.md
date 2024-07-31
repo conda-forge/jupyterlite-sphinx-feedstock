@@ -17,7 +17,7 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19163&branchName=main">
         <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlite-sphinx-feedstock?branchName=main">
       </a>
     </td>
@@ -149,7 +149,4 @@ Feedstock Maintainers
 * [@jtpio](https://github.com/jtpio/)
 * [@martinRenou](https://github.com/martinRenou/)
 * [@steppi](https://github.com/steppi/)
-
-
-<!-- dummy commit to enable rerendering -->
 
