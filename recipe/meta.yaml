@@ -28,6 +28,7 @@ requirements:
     - jupyterlab_server
     - jupyterlite-core >=0.2.0,<0.5.0
     - jupytext
+    - nbformat
     - sphinx >=4
 
 test:
