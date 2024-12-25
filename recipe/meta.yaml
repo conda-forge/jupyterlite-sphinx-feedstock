@@ -2,6 +2,7 @@
 {% set version = "0.17.1" %}
 # Update to 3.9 with next release: https://github.com/jupyterlite/jupyterlite-sphinx/pull/239
 {% set python_min = "3.8" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +23,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >= {{ python_min }}
+    - python >={{ python_min }}
     - docutils
     - jupyter_server
     - jupyterlab_server
@@ -38,7 +39,7 @@ test:
     - pip check
   requires:
     - pip
-    - python >= {{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyterlite/jupyterlite-sphinx
