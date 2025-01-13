@@ -1,7 +1,5 @@
 {% set name = "jupyterlite-sphinx" %}
 {% set version = "0.18.0" %}
-# Update to 3.9 with next release: https://github.com/jupyterlite/jupyterlite-sphinx/pull/239
-{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
