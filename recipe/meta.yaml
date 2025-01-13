@@ -1,5 +1,5 @@
 {% set name = "jupyterlite-sphinx" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.0" %}
 # Update to 3.9 with next release: https://github.com/jupyterlite/jupyterlite-sphinx/pull/239
 {% set python_min = "3.8" %}
 
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlite_sphinx-{{ version }}.tar.gz
-  sha256: a035fd3ee141795400a02d9670114abd9dab02490945f3ecc23fab105f55ae83
+  sha256: 8f51d20b754447d37940504f658471897d09dc2f0be9e772fec5cd0e90f4478f
 
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
