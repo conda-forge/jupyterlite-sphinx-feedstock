@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - docutils
     - jupyter_server
     - jupyterlab_server
-    - jupyterlite-core >=0.2.0,<0.5.0
+    - jupyterlite-core >=0.2.0,<0.6.0
     - jupytext
     - nbformat
     - sphinx >=4
