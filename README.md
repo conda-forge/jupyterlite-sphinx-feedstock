@@ -147,6 +147,7 @@ Feedstock Maintainers
 
 * [@Carreau](https://github.com/Carreau/)
 * [@agriyakhetarpal](https://github.com/agriyakhetarpal/)
+* [@conda-forge/jupyterlite](https://github.com/orgs/conda-forge/teams/jupyterlite/)
 * [@jtpio](https://github.com/jtpio/)
 * [@martinRenou](https://github.com/martinRenou/)
 * [@steppi](https://github.com/steppi/)
