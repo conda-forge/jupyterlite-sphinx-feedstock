@@ -14,10 +14,10 @@ source:
   sha256: 586cefe8d1f5c9634dd23d96ea89237d014abfa3ed6cb556b8c133baa6b5f779
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
-    - python -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
