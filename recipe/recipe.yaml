@@ -21,9 +21,9 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}.*
     - hatchling
     - pip
+    - python ${{ python_min }}.*
   run:
     - docutils
     - jupyter_server
@@ -53,6 +53,6 @@ extra:
   recipe-maintainers:
     - agriyakhetarpal
     - Carreau
-    - steppi
     - jtpio
     - martinRenou
+    - steppi

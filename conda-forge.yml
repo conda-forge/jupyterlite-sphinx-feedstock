@@ -1,6 +1,6 @@
 bot:
-  inspection: hint-grayskull
   automerge: true
+  inspection: hint-grayskull
 conda_build:
   error_overlinking: true
 conda_build_tool: rattler-build
