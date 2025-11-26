@@ -53,6 +53,7 @@ extra:
   recipe-maintainers:
     - agriyakhetarpal
     - Carreau
+    - conda-forge/jupyterlite
     - jtpio
     - martinRenou
     - steppi
