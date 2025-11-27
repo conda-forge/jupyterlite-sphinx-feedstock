@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "0.22.0"
+  python_check_max: "3.14"
+
+package:
+  name: jupyterlite-sphinx
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/j/jupyterlite-sphinx/jupyterlite_sphinx-${{ version }}.tar.gz
+  sha256: 586cefe8d1f5c9634dd23d96ea89237d014abfa3ed6cb556b8c133baa6b5f779
+
+build:
+  number: 1
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - hatchling
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - docutils
+    - jupyter_server
+    - jupyterlab_server
+    - jupyterlite-core >=0.2,<0.8
+    - jupytext
+    - nbformat
+    - python >=${{ python_min }}
+    - sphinx >=4
+
+tests:
+  - python:
+      imports: jupyterlite_sphinx
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
+
+about:
+  summary: Sphinx extension for deploying JupyterLite
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/jupyterlite/jupyterlite-sphinx
+  documentation: https://jupyterlite-sphinx.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - agriyakhetarpal
+    - Carreau
+    - conda-forge/jupyterlite
+    - jtpio
+    - martinRenou
+    - steppi
