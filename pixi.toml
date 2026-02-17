@@ -5,7 +5,7 @@
 
 [workspace]
 name = "jupyterlite-sphinx-feedstock"
-version = "3.53.3"  # conda-smithy version used to generate this file
+version = "3.54.2"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/jupyterlite-sphinx-feedstock"
 authors = ["@conda-forge/jupyterlite-sphinx"]
 channels = ["conda-forge"]
