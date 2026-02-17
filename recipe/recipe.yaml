@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.22.0"
+  version: "0.22.1"
   python_check_max: "3.14"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-sphinx/jupyterlite_sphinx-${{ version }}.tar.gz
-  sha256: 586cefe8d1f5c9634dd23d96ea89237d014abfa3ed6cb556b8c133baa6b5f779
+  sha256: e13682884deaecdb88dc81917df8a7275291f17575c3d1707b791e4a876a8556
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
