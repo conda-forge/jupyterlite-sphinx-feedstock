@@ -64,6 +64,8 @@ outputs:
           python_version:
             - ${{ python_min }}.*
             - ${{ python_check_max }}.*
+    about:
+      summary: Sphinx extension for deploying JupyterLite (with [markdown])
 
 about:
   summary: Sphinx extension for deploying JupyterLite
