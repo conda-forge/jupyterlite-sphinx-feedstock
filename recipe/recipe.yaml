@@ -14,7 +14,7 @@ source:
   sha256: ac7d4af5bda5b72ad728b74e343e4210e3517c8ba45c639e67185e5ab27079af
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -23,7 +23,7 @@ outputs:
     build:
       noarch: python
       script:
-        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check      
+        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - hatchling
@@ -47,23 +47,22 @@ outputs:
   - package:
       name: jupyterlite-sphinx-markdown
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python ${{ python_min }}.*
       run:
-        - python >=${{ python_min }}
-        - jupyterlite-sphinx
+        - ${{ pin_subpackage("jupyterlite-sphinx", exact=True) }}
         - jupytext
-      run_constraints:
-        - jupyterlite-sphinx =${{ version }}
     tests:
       - python:
-          imports: jupyterlite_sphinx
+          imports:
+            - jupyterlite_sphinx
+            - jupytext
           pip_check: true
           python_version:
             - ${{ python_min }}.*
             - ${{ python_check_max }}.*
+    about:
+      summary: Sphinx extension for deploying JupyterLite (with [markdown])
 
 about:
   summary: Sphinx extension for deploying JupyterLite
@@ -73,6 +72,7 @@ about:
   documentation: https://jupyterlite-sphinx.readthedocs.io
 
 extra:
+  feedstock-name: jupyterlite-sphinx
   recipe-maintainers:
     - agriyakhetarpal
     - Carreau

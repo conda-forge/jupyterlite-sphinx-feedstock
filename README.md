@@ -3,11 +3,26 @@ About jupyterlite-sphinx-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlite-sphinx-feedstock/blob/main/LICENSE.txt)
 
+
+About jupyterlite-sphinx
+------------------------
+
 Home: https://github.com/jupyterlite/jupyterlite-sphinx
 
 Package license: BSD-3-Clause
 
 Summary: Sphinx extension for deploying JupyterLite
+
+Documentation: https://jupyterlite-sphinx.readthedocs.io/
+
+About jupyterlite-sphinx-markdown
+---------------------------------
+
+Home: https://github.com/jupyterlite/jupyterlite-sphinx
+
+Package license: BSD-3-Clause
+
+Summary: Sphinx extension for deploying JupyterLite (with [markdown])
 
 Documentation: https://jupyterlite-sphinx.readthedocs.io/
 
