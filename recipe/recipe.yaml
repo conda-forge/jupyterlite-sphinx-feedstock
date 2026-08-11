@@ -2,45 +2,68 @@
 schema_version: 1
 
 context:
-  version: "0.22.1"
+  version: "0.23.0"
   python_check_max: "3.14"
 
-package:
-  name: jupyterlite-sphinx
+recipe:
+  name: jupyterlite-sphinx-packages
   version: ${{ version }}
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-sphinx/jupyterlite_sphinx-${{ version }}.tar.gz
-  sha256: e13682884deaecdb88dc81917df8a7275291f17575c3d1707b791e4a876a8556
+  sha256: ac7d4af5bda5b72ad728b74e343e4210e3517c8ba45c639e67185e5ab27079af
 
 build:
   number: 0
   noarch: python
-  script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
-requirements:
-  host:
-    - hatchling
-    - pip
-    - python ${{ python_min }}.*
-  run:
-    - docutils
-    - jupyter_server
-    - jupyterlab_server
-    - jupyterlite-core >=0.2,<0.8
-    - jupytext
-    - nbformat
-    - python >=${{ python_min }}
-    - sphinx >=4
-
-tests:
-  - python:
-      imports: jupyterlite_sphinx
-      pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - ${{ python_check_max }}.*
+outputs:
+  - package:
+      name: jupyterlite-sphinx
+    build:
+      noarch: python
+      script:
+        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check      
+    requirements:
+      host:
+        - hatchling
+        - pip
+        - python ${{ python_min }}.*
+      run:
+        - docutils
+        - jupyter_server
+        - jupyterlab_server
+        - jupyterlite-core >=0.2,<0.9
+        - nbformat
+        - python >=${{ python_min }}
+        - sphinx >=4
+    tests:
+      - python:
+          imports: jupyterlite_sphinx
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - ${{ python_check_max }}.*
+  - package:
+      name: jupyterlite-sphinx-markdown
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+      run:
+        - python >=${{ python_min }}
+        - jupyterlite-sphinx
+        - jupytext
+      run_constraints:
+        - jupyterlite-sphinx =${{ version }}
+    tests:
+      - python:
+          imports: jupyterlite_sphinx
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - ${{ python_check_max }}.*
 
 about:
   summary: Sphinx extension for deploying JupyterLite

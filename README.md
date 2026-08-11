@@ -15,10 +15,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19163&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlite-sphinx-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/jupyterlite-sphinx-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/jupyterlite-sphinx-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -30,6 +31,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupyterlite--sphinx-green.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyterlite-sphinx.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyterlite-sphinx.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyterlite-sphinx.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyterlite--sphinx--markdown-green.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx-markdown) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyterlite-sphinx-markdown.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx-markdown) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyterlite-sphinx-markdown.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx-markdown) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyterlite-sphinx-markdown.svg)](https://anaconda.org/conda-forge/jupyterlite-sphinx-markdown) |
 
 Installing jupyterlite-sphinx
 =============================
@@ -41,31 +43,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyterlite-sphinx` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
-conda install jupyterlite-sphinx
+conda install jupyterlite-sphinx jupyterlite-sphinx-markdown
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
-mamba install jupyterlite-sphinx
+mamba install jupyterlite-sphinx jupyterlite-sphinx-markdown
 ```
 
-It is possible to list all of the versions of `jupyterlite-sphinx` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add jupyterlite-sphinx jupyterlite-sphinx-markdown
+# for installing globally
+pixi global install jupyterlite-sphinx jupyterlite-sphinx-markdown
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `jupyterlite-sphinx` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search jupyterlite-sphinx --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search jupyterlite-sphinx --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search jupyterlite-sphinx --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +121,8 @@ mamba repoquery whoneeds jupyterlite-sphinx --channel conda-forge
 # List dependencies of `jupyterlite-sphinx`:
 mamba repoquery depends jupyterlite-sphinx --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
