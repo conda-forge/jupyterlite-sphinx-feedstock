@@ -59,7 +59,9 @@ outputs:
         - jupyterlite-sphinx =${{ version }}
     tests:
       - python:
-          imports: jupyterlite_sphinx
+          imports:
+            - jupyterlite_sphinx
+            - jupytext
           pip_check: true
           python_version:
             - ${{ python_min }}.*
