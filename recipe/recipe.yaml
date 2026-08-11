@@ -73,6 +73,7 @@ about:
   documentation: https://jupyterlite-sphinx.readthedocs.io
 
 extra:
+  feedstock-name: jupyterlite-sphinx
   recipe-maintainers:
     - agriyakhetarpal
     - Carreau
