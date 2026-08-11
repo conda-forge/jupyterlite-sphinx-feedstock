@@ -52,11 +52,8 @@ outputs:
       host:
         - python ${{ python_min }}.*
       run:
-        - python >=${{ python_min }}
-        - jupyterlite-sphinx
+        - ${{ pin_subpackage("jupyterlite-sphinx", exact=True) }}
         - jupytext
-      run_constraints:
-        - jupyterlite-sphinx =${{ version }}
     tests:
       - python:
           imports:
